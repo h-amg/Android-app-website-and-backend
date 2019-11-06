@@ -1,0 +1,35 @@
+{% extends "_base.html" %}
+
+{% block title %} - Signups{% endblock %}
+
+{% block content %}
+
+{% include "navigation.html" %}
+
+<h1>Signups List</h1>
+<br>
+<a class="btn btn-primary" href="{{ url_for('user.embed_code') }}">Embed Code</a>
+
+{% if signups %}
+  <a class="btn btn-primary" href="{{ url_for('user.download_emails') }}">Download CSV</a>
+  <table class="table admin_table">
+    <tr>
+      <th>No.</th><th>Email&nbsp;Address</th><th>Price&nbsp;plan</th><th>Registered</th><th>Source</th>
+    </tr>
+    <br><br>
+    {% for signup in signups %}
+      <tr>
+        <td>{{ signup.id }}</td>
+        <td>{{ signup.email }}</td>
+        <td>{{ signup.price_plan }}</td>
+        <td>{{ signup.email_added_on }}</td>
+        <td style="white-space: nowrap;">{{ signup.source }}</td>
+
+      </tr>
+    {% endfor %}
+  </table>
+{% else %}
+  <p>No signups yet</p>
+{% endif %}
+
+{% endblock %}

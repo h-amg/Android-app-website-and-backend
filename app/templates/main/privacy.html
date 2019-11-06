@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="static/img/favicon_trans.ico" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>XHominid</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|Oxygen:700" rel="stylesheet">
+    
+    <!-- css files -->
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet" media="screen">
+
+    <!-- APPRU  -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/appru/linearicons.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/appru/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/appru/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/appru/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/appru/nice-select.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/appru/hexagons.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/appru/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/appru/main.css')}}">
+
+    <script src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+
+
+    <!-- START: Google Analytics(Global site tag (gtag.js)) -->
+    <!-- END: Google Analytics -->
+
+    <!-- start Mixpanel -->
+    <!-- end Mixpanel -->
+
+</head>
+
+
+<body class="is-boxed has-animations">
+    <div class="body-wrap boxed-container">
+      <!-- start header Area -->
+      <header id="header">
+        <!-- messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+              <div class="alert alert-{{ category }}">
+                {% if category == "danger" and request.form['btn'] == 'planSignUp' %}
+                  <script>
+                      document.location.hash = '#pricingSection';
+                  </script>
+                {% elif category == "danger" and request.form['btn'] == 'reg_signUp' %}
+                  <script>
+                      document.location.hash = '#footerSignUp';
+                  </script>
+                {% else %}
+                  <a class="close" title="Close" href="" data-dismiss="alert">&times;</a>
+                {% endif %}
+                {{message}}
+              </div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <!-- End: signup box -->
+        <div class="main-menu"> <!-- *Removed Container -->
+          <div class="row align-items-center justify-content-between d-flex">
+            <div id="logo">
+              <a href="/"><img src="static/img/logo_title_trans.png" alt="" title="" /></a>
+            </div>
+            <nav id="nav-menu-container">
+              <ul class="nav-menu">
+                <li class="menu-active"><a href="/">Home</a></li>
+                <li><a href="/#pricingSection">Pricing</a></li>
+                <li><a href="/privacy">Privacy</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!-- End: header Area -->
+
+        <main>
+              <section class="hero">
+                <div class="container">
+                    <div class="hero-inner">
+            <div class="hero-copy">
+              <h1 class="hero-title mt-0">Privacy Policy</h1>
+              <pre class="privacy-paragraph">
+YOUR PRIVACY POLICY GOES HERE...
+ 
+              </pre>
+
+            </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    
+
+    <footer class="site-footer">
+      <div class="footer-particles-container">
+        <canvas id="footer-particles"></canvas>
+      </div>
+
+      <div class="site-footer-bottom">
+        <div class="container">
+          <div class="site-footer-inner">
+            <div class="brand footer-brand">
+              <a href="/">
+                <img src="static/img/logo_trans.png" alt="Venus logo">
+              </a>
+            </div>
+            <ul class="footer-links list-reset">
+              <li>
+                <a href="#">Contact</a>
+              </li>
+              <li>
+                <a href="#">About us</a>
+              </li>
+              <li>
+                <a href="#">FAQ's</a>
+              </li>
+              <li>
+                <a href="#">Support</a>
+              </li>
+            </ul>
+            <ul class="footer-social-links list-reset">
+            </ul>
+            <div class="footer-copyright">&copy; 2018 Venus, all rights reserved</div>
+          </div>
+        </div>
+      </div>
+        </footer>
+    </div>
+
+    
+    <!-- JAVASCRIPT -->
+    <script src="{{url_for('static', filename='js/main.min.js')}}"></script>
+    <!-- JAVASCRIPT -->
+    <script src="{{url_for('static', filename='js/main.min.js')}}"></script>
+    <!-- Track page loads -->
+
+</body>
+</html>

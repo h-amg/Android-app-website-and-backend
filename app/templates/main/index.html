@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="static/img/logo_trans.png" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>XHominid</title>
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|Oxygen:700" rel="stylesheet">
+    
+    <!-- css files -->
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet" media="screen">
+
+    <!-- APPRU  -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/appru/linearicons.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/appru/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/appru/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/appru/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/appru/nice-select.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/appru/hexagons.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/appru/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/appru/main.css')}}">
+
+    <script src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+
+
+    <!-- START: Google Analytics(Global site tag (gtag.js)) -->
+    <!-- END: Google Analytics -->
+
+    <!-- start Mixpanel -->
+    <!-- end Mixpanel -->
+
+
+</head>
+
+
+<body class="is-boxed has-animations">
+    <div class="body-wrap boxed-container">
+      <!-- start header Area -->
+      <header id="header">
+        <!-- messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+              <div class="alert alert-{{ category }}">
+                {% if category == "danger" and request.form['btn'] == 'planSignUp' %}
+                  <script>
+                      document.location.hash = '#pricingSection';
+                  </script>
+                {% elif category == "danger" and request.form['btn'] == 'reg_signUp' %}
+                  <script>
+                      document.location.hash = '#footerSignUp';
+                  </script>
+                {% else %}
+                  <a class="close" title="Close" href="" data-dismiss="alert">&times;</a>
+                {% endif %}
+                {{message}}
+              </div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <!-- End: Messages -->
+        <div class="main-menu"> <!-- *Removed Container -->
+          <div class="row align-items-center justify-content-between d-flex">
+            <div id="logo">
+              <a href="/"><img src="static/img/logo_title_trans.png" alt="" title="" /></a>
+            </div>
+            <nav id="nav-menu-container">
+              <ul class="nav-menu">
+                <li class="menu-active"><a href="/">Home</a></li>
+                <li class="menu-active"><a href="/#why">Why XHominid?</a></li>
+                <li class="menu-active"><a href="/#features">Features</a></li>
+                <li><a href="/#pricingSection">Pricing</a></li>
+                <li><a href="/privacy">Privacy</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!-- End: header Area -->
+
+
+      <main>
+        <section class="hero text-center text-light">
+          <div class="hero-bg"></div>
+          <!-- start animation -->
+          <div class="container-sm">
+            <div class="hero-inner">
+              <div class="hero-copy">
+                <h1 class="hero-title mt-0">Get nutrition coaching and your meals planned by an expert nutritionist</h1>
+                <div class="hero-cta">
+                  <div class="control">
+                    <!-- START: android play store badge -->
+                    <div class="android_badge">
+                      <a href='http://play.google.com/store/apps/details?id=com.main.android.activium&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='static/img/android-badge.png' class="google-img"/></a>
+                    </div>
+                    <!-- END: android play store badge -->
+                  </div>
+                </div>
+              </div>
+              <div class="mockup-container">
+                <div class="mockup-bg">
+                  <img src="static/img/iphone-hero-bg.svg" alt="iPhone illustration">
+                </div>
+                <img class="device-mockup" src="static/img/mockup0.2.png" alt="iPhone Hero">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Start: Why use it section -->
+         <section class="pricing-area pricing-page" id="why">
+          <div id = "prices" class="container">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-6">
+                <div class="signup-title-sec text-center">
+                  <h2 class="signup-title">Why use XHominid</h2>
+                  <p>We believe in democratizing access to expert nutritionists. You no longer have to spend countless hours on the internet trying to figure out a diet that works for you or a recipe you like and fits your diet. With XHominid you get a personalized diet designed and optimized by an expert nutritionist. Wherever you are in your fitness journey XHominid makes managing your diet simple and effective.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End: Why use it section -->
+
+        <section class="features-extended section" id="features">
+          <div class="features-extended-inner section-inner">
+            <div class="features-extended-wrap">
+              <div class="container">
+                <div class="feature-extended">
+                  <div class="feature-extended-image">
+                    <div class="mockup-bg">
+                      <img src="static/img/iphone-feature-bg-01.svg" alt="iPhone Feature 01 illustration">
+                    </div>
+                    <img class="device-mockup is-revealing" src="static/img/consultation_sess_mockup.png" alt="iPhone Feature 01">
+                  </div>
+                  <div class="feature-extended-body is-revealing">
+                    <h3 class="mt-0 mb-16">Consultation Sessions</h3>
+                    <p class="m-0">20 minutes weekly, bi-weekly or monthly consultation sessions where you get to talk to an expert nutritionist about your fitness goals and challenges and food preferences. These sessions will give your nutritionist an opportunity to better understand your lifestyle, determine your nutritional requirements and gather the information needed to design and manage your diet.</p>
+                  </div>
+                </div>
+                <div class="feature-extended">
+                  <div class="feature-extended-image">
+                    <div class="mockup-bg">
+                      <img src="static/img/iphone-feature-bg-01.svg" alt="iPhone Feature 01 illustration">
+                    </div>
+                    <img class="device-mockup is-revealing" src="static/img/messaging_mockup.png" alt="iPhone Feature 01">
+                  </div>
+                  <div class="feature-extended-body is-revealing">
+                    <h3 class="mt-0 mb-16">On-demand nutrition coaching</h3>
+                    <p class="m-0">Strict meal planning isn't for everyone. With on-demand nutrition coaching you get continuous guidance and feedback on how to change your eating habits and make better food decisions to improve your diet. Yout nutritionist will periodically check on you each day to make sure you’re making the right diet decisions.</p>
+                  </div>
+                </div>
+                <div class="feature-extended">
+                  <div class="feature-extended-image">
+                    <div class="mockup-bg">
+                      <img src="static/img/iphone-feature-bg-02.svg" alt="iPhone Feature 02 illustration">
+                    </div>
+                    <img class="device-mockup is-revealing" src="static/img/meal_plan_mockup.png" alt="iPhone Feature 02">
+                  </div>
+                  <div class="feature-extended-body is-revealing">
+                    <h3 class="mt-0 mb-16">Personalized meal plans</h3>
+                    <p class="m-0">Receive weekly meal plans with recipes and cooking instructions designed specifically for you. Your nutritionist designs a meal plan personalized to match your taste and fitness goals. Your nutritionist adjusts your meal plan after each consultation session based on your feedback, your progress and diet requirements.</p>
+                  </div>
+                </div>
+                <div class="feature-extended">
+                  <div class="feature-extended-image">
+                    <div class="mockup-bg">
+                      <img src="static/img/iphone-feature-bg-03.svg" alt="iPhone Feature 03 illustration">
+                    </div>
+                    <img class="device-mockup is-revealing" src="static/img/shopping_list_mockup.png" alt="iPhone Feature 03">
+                  </div>
+                  <div class="feature-extended-body is-revealing">
+                    <h3 class="mt-0 mb-16">Shopping list</h3>
+                    <p class="m-0">A weekly shopping list with only the items you need to prepare your meal plan.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+     
+
+    <!-- Start Pricing Area -->
+    <section class="pricing-area pricing-page" id="pricingSection">
+      <div id = "prices" class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6">
+            <div class="signup-title-sec text-center">
+              <h2 class="signup-title" >Subscription Plans</h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- Start: PRicing plans -->
+        <div class="row">
+
+           <div class="col-lg-4 col-md-6">
+            <div class="single-price">
+              <div class="top-sec d-flex justify-content-between">
+                <div class="top-left">
+                  <h4>Basic</h4>
+                  <h5>1 week free trial</h5>
+                </div>
+                <div class="top-right">
+                  <h1>$29.99</h1>
+                  <h5>per month</h5>
+                </div>
+              </div>
+              <div class="end-sec">
+                <ul>
+                  <li>Monthly Counselling sessions</li>
+                  <li>Monthly updated personalized meal plans</li>
+                  <li>Monthly updated shopping lists</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="single-price">
+              <div class="top-sec d-flex justify-content-between">
+                <div class="top-left">
+                  <h4>Intermediate</h4>
+                  <h5>1 week free trial</h5>
+                </div>
+                <div class="top-right">
+                  <h1>$39.99</h1>
+                  <h5>per month</h5>
+                </div>
+              </div>
+              <div class="end-sec">
+                <ul>
+                  <li>Bi-weekly Counselling sessions</li>
+                  <li>Bi-weekly updated personalized meal plans</li>
+                  <li>Bi-weekly updated shopping lists</li>
+                  <li>On-demand nutrition coaching</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="single-price">
+              <div class="top-sec d-flex justify-content-between">
+                <div class="top-left">
+                  <h4>Premium</h4>
+                  <h5>1 week free trial</h5>
+                </div>
+                <div class="top-right">
+                  <h1>$59.99</h1>
+                  <h5>per month</h5>
+                </div>
+              </div>
+              <div class="end-sec">
+                <ul>
+                  <li>Weekly Counselling sessions</li>
+                  <li>Weekly updated personalized meal plans</li>
+                  <li>Weekly updated shopping lists</li>
+                  <li>On-demand nutrition coaching</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- End: PRicing plans -->
+        </div>
+      </div>
+    </section>
+    <!-- End Pricing Area -->
+
+    <footer class="site-footer">
+      <div class="footer-particles-container">
+        <canvas id="footer-particles"></canvas>
+      </div>
+      <div class="site-footer-top">
+        <section class="cta section text-light">
+          <div class="container-sm">
+            <div class="cta-inner section-inner">
+              <div class="cta-header text-center">
+                <h2 class="mt-0">Stay in the know</h2>
+                <p class="section-paragraph">To be the first notified when we go live on IOS or if you wanna stay up to date with our latest, sign up below.</p>
+              </div>
+
+              <div class="row d-flex justify-content-center" id="footerSignUp">  
+                <!-- Start: signup box -->
+                <form class="form-email" role="form" method="post" action="/">
+                    <div class="field field-grouped">
+                      <div class="control control-expanded">
+                        <input class="input" type="email" name="email" placeholder="Enter email address">
+                        <div>
+                          <span class="error">
+                              {% if form.email.errors and request.form['btn'] == 'reg_signUp' %}
+                                <script>
+                                document.location.hash = '#footerSignUp';
+                                </script>
+                                {% for error in form.email.errors %}
+                                  {{ error }}
+                                {% endfor %}
+                              {% endif %}
+                          </span>
+                        </div>
+                      </div>
+                      <div class="control">
+                          <button class="button button-primary button-block button-shadow button-wide-mobile" name="btn" value="reg_signUp" type="submit">SIGN UP</button>
+                      </div>
+                    </div>
+                </form>
+                <!-- End: signup box -->
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="site-footer-bottom">
+        <div class="container">
+          <div class="site-footer-inner">
+            <div class="brand footer-brand">
+              <a href="/">
+                <img src="static/img/logo_trans.png" alt="Venus logo">
+              </a>
+            </div>
+            <ul class="footer-links list-reset">
+              <li>
+                <a href="#">Contact</a>
+              </li>
+              <li>
+                <a href="#">About us</a>
+              </li>
+              <li>
+                <a href="#">FAQ's</a>
+              </li>
+              <li>
+                <a href="#">Support</a>
+              </li>
+            </ul>
+            <ul class="footer-social-links list-reset">
+            </ul>
+            <div class="footer-copyright">&copy;  2019 XHominid, all rights reserved</div>
+          </div>
+        </div>
+      </div>
+        </footer>
+
+    </div>
+    
+</body>
+
+
+</html>
+
+<!-- JAVASCRIPT -->
+<script src="{{url_for('static', filename='js/main.min.js')}}"></script>
+
+<!-- Track page loads -->
+

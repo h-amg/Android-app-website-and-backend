@@ -1,0 +1,50 @@
+{% extends "_base.html" %}
+
+{% block head %}
+  {{ super() }}
+  <link href="{{url_for('static', filename='css/nutritionist_dash.css')}}" rel="stylesheet" media="screen">
+  <script>
+     const userEmail = '{{ userEmail }}'; 
+  </script>
+{% endblock %}
+
+{% block title %} - Nutritionist's Dashboard{% endblock %}
+
+{% block content %}
+
+{% include "navigation.html" %}
+
+<!-- Twilio video -->
+<div id="remote-media"></div>
+<div id="controls">
+  <div id="preview">
+    <p class="instructions">Hello Beautiful</p>
+    <div id="local-media"></div>
+    <button id="button-preview">Preview My Camera</button>
+  </div>
+  <div id="room-controls">
+    <p class="instructions">Room Name:</p>
+    <input id="room-name" type="text" placeholder="Enter a room name" />
+    <button id="button-join">Join Room</button>
+    <button id="button-leave">Leave Room</button>
+  </div>
+  <div id="log"></div>
+</div>
+
+
+
+{% endblock %}
+
+<!-- Java script -->
+{% block js %}
+  {{ super() }}
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="//media.twiliocdn.com/sdk/js/video/releases/2.0.0-beta10/twilio-video.min.js"></script>
+  <script src="{{url_for('static', filename='js/twilio_video.js')}}"></script>
+  <!-- Set  browser global variable "Video" -->
+  <script>
+    const Video = Twilio.Video;
+  </script>
+{% endblock %}
+
+
