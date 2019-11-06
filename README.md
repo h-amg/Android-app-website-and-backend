@@ -38,7 +38,7 @@ $ set APP_SETTINGS=app.config.DevelopmentConfig
 ```
 or
 ```sh
-$ export APP_SETTINGS=app.config.ProductionConfig
+$ set APP_SETTINGS=app.config.ProductionConfig
 ```
 
 Google credentials (access to postgres SQL DB):
