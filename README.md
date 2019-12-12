@@ -1,4 +1,4 @@
-# XHominid Webb App
+# XHominid Web App
 
 
 Backend for an Android nutrition coaching and meal planning app
