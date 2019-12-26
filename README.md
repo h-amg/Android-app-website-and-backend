@@ -46,6 +46,25 @@ XHomind is a platform that helps people looking for nutrition coaching and meal 
 ### [API](app/mod_api) module
 - Exposes an Api endpoint for email signups that collects signee email and saves it to the database.
 
+### Stack
+#### Front-end  
+- HTML, CSS, JavaScript
+
+#### Back-end
+- Flask/Python
+- JavaScript
+- Twilio Video
+- Twilio Chat 
+- MongoDB stitch
+- MongoDB Atlas
+- Firebase Cloud Storage
+- Firebase Cloud Messaging
+- Google cloud - App engine
+
+#### Database
+- MongoDB Atlas
+- Google cloud - Cloud Sql: PostgreSQL
+
 ### Acknowledgements
 In developing this project I used and modified a boilerplate open source [flask App: Flask-Landing](https://github.com/mjhea0/Flask-Landing) by [Michael Herman](https://github.com/mjhea0)
 
