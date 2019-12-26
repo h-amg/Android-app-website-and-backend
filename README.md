@@ -1,6 +1,5 @@
 # ![alt text](logo3.png "logo")&nbsp; [XHominid](http://www.xhominid.com/) Web App
 
-
 A Flask website and Backend server for an Android nutrition coaching and meal planning app.
 
 check out XHominid on google play: &nbsp;&nbsp;&nbsp;&nbsp; [![alt text](android-badge.png "Google play lisiting")](https://play.google.com/store/apps/details?id=com.main.android.activium&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
