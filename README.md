@@ -1,4 +1,4 @@
-# ![alt text](logo3.png "logo")&nbsp; [XHominid](http://www.xhominid.com/) Web App
+# ![alt text](logo_trans.png "logo")&nbsp; [XHominid](http://www.xhominid.com/) Web App
 
 A Flask website and Backend server for an Android nutrition coaching and meal planning app.
 
