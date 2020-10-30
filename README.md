@@ -69,7 +69,7 @@ XHomind is a platform that helps people looking for nutrition coaching and meal 
 In developing this project I used and modified a boilerplate open source [flask App: Flask-Landing](https://github.com/mjhea0/Flask-Landing) by [Michael Herman](https://github.com/mjhea0)
 
 ### Blog
-Check out my medium blog post [**From zero to published**](https://medium.com/@husamgibreel_91278/from-zero-to-published-7d9ba9de926a?source=friends_link&sk=19518dcd3eeff403237149fb00d716c9) about my exoerience building this project and the challenges that came along with it.
+Check out my medium blog post [**From zero to published**](https://medium.com/@husamgibreel_91278/from-zero-to-published-7d9ba9de926a?source=friends_link&sk=19518dcd3eeff403237149fb00d716c9) about my experience building this project and the challenges that came along with it.
 
 ---
 
@@ -77,7 +77,7 @@ Check out my medium blog post [**From zero to published**](https://medium.com/@h
 
 ### Installation
 
-1. Clone thisn repo 
+1. Clone this repo 
 1. Create and activate a virtual environment
 1. Install the dependencies using [requirements.txt](requirements.txt)
 
